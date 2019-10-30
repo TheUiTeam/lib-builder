@@ -1,0 +1,40 @@
+{
+  "name": "@theuiteam/build",
+  "version": "0.0.1",
+  "description": "Opinionated toolbox boilerplate to create Typescript React components",
+  "main": "src/index.js",
+  "repository": "https://github.com/theuiteam/build",
+  "license": "MIT",
+  "bin": {
+    "team-build": "./bin/team-build"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "add_permission": "chmod +x ./bin/team-build.js",
+    "cli": "./bin/team-build.js",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@size-limit/preset-small-lib": "^2.1.6",
+    "@types/jest": "^24.0.20",
+    "chalk": "^2.3.2",
+    "docz": "^2.0.0-rc.66",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "tmp": "^0.0.33",
+    "ts-jest": "^24.1.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.5.2"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "configs",
+    "storybook"
+  ],
+  "keywords": [],
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/tmp": "^0.0.33"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "removeComments": false,
+    "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "importHelpers": true,
+    "noFallthroughCasesInSwitch": true,
+    "lib": [
+      "dom",
+      "es2015",
+      "es2015.promise",
+      "es5",
+      "scripthost",
+      "es2015.collection",
+      "es2015.symbol",
+      "es2015.iterable",
+      "es2015.promise"
+    ]
+  },
+  "include": [
+    "bin"
+  ]
+}
