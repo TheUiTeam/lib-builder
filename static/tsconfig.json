@@ -24,4 +24,7 @@
     ],
     "jsx": "react"
   },
+  "include": [
+    "src"
+  ]
 }

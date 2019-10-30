@@ -1,17 +1,17 @@
 {
-  "name": "@theuiteam/build",
+  "name": "@theuiteam/lib-builder",
   "version": "0.0.1",
   "description": "Opinionated toolbox boilerplate to create Typescript React components",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/theuiteam/build",
   "license": "MIT",
   "bin": {
-    "team-build": "./bin/team-build"
+    "lib-builder": "./bin/lib-builder"
   },
   "scripts": {
     "build": "node_modules/.bin/tsc",
-    "add_permission": "chmod +x ./bin/team-build.js",
-    "cli": "./bin/team-build.js",
+    "add_permission": "chmod +x ./bin/lib-builder.js",
+    "cli": "./bin/lib-builder.js",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
