@@ -36,6 +36,8 @@ const modifyPackage = async () => {
       size: 'npx size-limit',
       lint: 'team-build lint',
       format: 'team-build format',
+      "docz:dev": "docz dev",
+      "docz:build": "docz build"
     },
     peerDependencies: {
       react: '^16.10.0',

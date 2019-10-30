@@ -1,5 +1,5 @@
 export default {
   typescript: true,
-  title: 'Docz Typescript',
+  title: 'Docz',
   menu: ['Getting Started', 'Components'],
 }
