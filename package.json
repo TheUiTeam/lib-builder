@@ -1,6 +1,6 @@
 {
   "name": "@theuiteam/lib-builder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Opinionated toolbox boilerplate to create Typescript React components",
   "main": "dist/index.js",
   "repository": "https://github.com/theuiteam/lib-builder",
@@ -12,7 +12,8 @@
     "build": "node_modules/.bin/tsc",
     "add_permission": "chmod +x ./bin/lib-builder",
     "cli": "./bin/lib-builder",
-    "prepublish": "yarn add_permission && yarn build"
+    "prepublish": "yarn add_permission && yarn build",
+    "release": "npm publish --access public"
   },
   "dependencies": {
     "@size-limit/preset-small-lib": "^2.1.6",
