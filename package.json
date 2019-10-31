@@ -10,9 +10,9 @@
   },
   "scripts": {
     "build": "node_modules/.bin/tsc",
-    "add_permission": "chmod +x ./bin/lib-builder.js",
-    "cli": "./bin/lib-builder.js",
-    "prepublishOnly": "yarn build"
+    "add_permission": "chmod +x ./bin/lib-builder",
+    "cli": "./bin/lib-builder",
+    "prepublish": "yarn add_permission && yarn build"
   },
   "dependencies": {
     "@size-limit/preset-small-lib": "^2.1.6",
