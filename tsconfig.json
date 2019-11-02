@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist/es5",
+    "outDir": "dist",
     "removeComments": false,
     "target": "es5",
     "allowSyntheticDefaultImports": true,
