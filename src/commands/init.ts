@@ -34,7 +34,7 @@ const modifyPackage = async () => {
       build: 'lib-builder build && yarn size:report',
       release: 'yarn build && yarn test',
       size: 'npx size-limit',
-      'size:report': 'npx size-limit --json > package-size.json',
+      'size:report': 'npx size-limit --json > .size.json',
       lint: 'lib-builder lint',
       format: 'lib-builder format',
       "docz:dev": "docz dev",
