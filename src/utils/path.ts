@@ -10,9 +10,13 @@ export const binPath = (binName: string):string => {
     if (existsSync(file)) {
       return file;
     }
-    path = resolve(path, '...');
+    const newPath = resolve(path, '..');
+    if(newPath === path){
+      break;
+    }
+    path = newPath;
   }
-  throw new Error(`could not find ${binName}`);
+  throw new Error(`could not find command: [${binName}]`);
 
   return 'error';
-}
+};
