@@ -1,6 +1,6 @@
-import {green} from "../utils/log";
-import {binPath} from "../utils/path";
-import {spawn} from "../utils/spawn";
+import {green} from '../utils/log';
+import {binPath} from '../utils/path';
+import {spawn} from '../utils/spawn';
 
 export const format = async () => {
   green('Running Prettier 🥑');

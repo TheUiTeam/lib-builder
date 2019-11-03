@@ -1,8 +1,8 @@
 import {
+  copyFile as nodeCopyFile,
   exists as nodeExists,
-  writeFile as nodeWriteFile,
   mkdir as nodeMkdir,
-  copyFile as nodeCopyFile
+  writeFile as nodeWriteFile
 } from 'fs';
 import {promisify} from 'util';
 

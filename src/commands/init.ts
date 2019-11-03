@@ -1,8 +1,8 @@
-import * as path from 'path';
 import * as fs from 'fs';
+import * as path from 'path';
 import { promisify } from 'util';
-import {green} from "../utils/log";
-import {exec} from "../utils/exec";
+import {exec} from '../utils/exec';
+import {green, red} from '../utils/log';
 
 const copyStatic = async () => {
   green('Copying files 📂');
@@ -37,8 +37,9 @@ const modifyPackage = async () => {
       'size:report': 'npx size-limit --json > .size.json',
       lint: 'lib-builder lint',
       format: 'lib-builder format',
-      "docz:dev": "docz dev",
-      "docz:build": "docz build"
+      update: 'lib-builder update',
+      'docz:dev': 'docz dev',
+      'docz:build': 'docz build'
     },
     peerDependencies: {
       react: '^16.9.0',
@@ -57,28 +58,28 @@ const modifyPackage = async () => {
     files: ['dist'],
     keywords: pkg.keywords || [],
     repository: pkg.repository || '',
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
+    'husky': {
+      'hooks': {
+        'pre-commit': 'lint-staged'
       }
     },
-    "lint-staged": {
-      "*.{ts,tsx}": [
-        "prettier --write",
-        "tslint --fix",
-        "git add"
+    'lint-staged': {
+      '*.{ts,tsx}': [
+        'prettier --write',
+        'tslint --fix',
+        'git add'
       ],
-      "*.{js,css,json,md}": [
-        "prettier --write",
-        "git add"
+      '*.{js,css,json,md}': [
+        'prettier --write',
+        'git add'
       ]
     },
-    "prettier": {
-      "printWidth": 120,
-      "trailingComma": "es5",
-      "tabWidth": 2,
-      "semi": true,
-      "singleQuote": true
+    'prettier': {
+      'printWidth': 120,
+      'trailingComma': 'es5',
+      'tabWidth': 2,
+      'semi': true,
+      'singleQuote': true
     }
   };
 
@@ -92,6 +93,6 @@ export const init = async () => {
     await copyStatic();
     green('Project created 🚀');
   } catch (err) {
-    console.log(err);
+    red(err);
   }
 };

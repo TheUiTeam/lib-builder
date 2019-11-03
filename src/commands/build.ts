@@ -1,36 +1,36 @@
-import { writeFileSync } from 'fs';
 import { spawn } from 'child_process';
+import { writeFileSync } from 'fs';
 import * as tmp from 'tmp';
-import {binPath} from "../utils/path";
-import {green} from "../utils/log";
+import {green, red} from '../utils/log';
+import {binPath} from '../utils/path';
 
 const cwd = process.cwd();
 
 const es5Config = {
-  "importHelpers": true,
-  "noImplicitAny": true,
-  "removeComments": false,
-  "allowSyntheticDefaultImports": true,
-  "esModuleInterop": true,
-  "declaration": true,
-  "outDir": `${cwd}/dist/es5`,
-  "lib": ["dom", "es6"],
-  "target": "es5",
-  "jsx": "react",
-  "moduleResolution": "node"
+  'importHelpers': true,
+  'noImplicitAny': true,
+  'removeComments': false,
+  'allowSyntheticDefaultImports': true,
+  'esModuleInterop': true,
+  'declaration': true,
+  'outDir': `${cwd}/dist/es5`,
+  'lib': ['dom', 'es6'],
+  'target': 'es5',
+  'jsx': 'react',
+  'moduleResolution': 'node'
 };
 
 const es2015Config = {
   ...es5Config,
-  "outDir": `${cwd}/dist/es2015`,
-    "lib": ["dom", "es6"],
-    "module": "es2015",
-    "moduleResolution": "node"
+  'outDir': `${cwd}/dist/es2015`,
+    'lib': ['dom', 'es6'],
+    'module': 'es2015',
+    'moduleResolution': 'node'
 };
 
 const makeConfig = (options:any) => ({
-  "compilerOptions": options,
-  "include": [`${cwd}/src/**/*.ts`, `${cwd}/src/**/*.tsx`]
+  'compilerOptions': options,
+  'include': [`${cwd}/src/**/*.ts`, `${cwd}/src/**/*.tsx`]
 });
 
 const tscBin = binPath('tsc');
@@ -43,7 +43,7 @@ const buildES5 = (): Promise<void> => {
     writeFileSync(configPath, JSON.stringify(makeConfig(es5Config), null, ' '));
     // NODE_ENV=production
     const subprocess = spawn(tscBin, ['-p', configPath], {
-      env: {...process.env, FORCE_COLOR: "true"},
+      env: {...process.env, FORCE_COLOR: 'true'},
       stdio: 'inherit'
     });
 
@@ -62,7 +62,7 @@ const buildES2015 = () => {
     const configPath = tmpobj.name;
     writeFileSync(configPath, JSON.stringify(makeConfig(es2015Config), null, ' '));
     const subprocess = spawn(tscBin, ['-p', configPath], {
-      env: {...process.env, FORCE_COLOR: "true"},
+      env: {...process.env, FORCE_COLOR: 'true'},
       stdio: 'inherit'
     });
 
@@ -78,7 +78,7 @@ export const build = async () => {
     await buildES5();
     await buildES2015();
   } catch (e) {
-    console.log(e);
+    red(e);
     process.exit(1);
   }
 };

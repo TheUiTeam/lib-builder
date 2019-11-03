@@ -1,6 +1,6 @@
-import {binPath} from "../utils/path";
-import {green} from "../utils/log";
-import {spawn} from "../utils/spawn";
+import {green} from '../utils/log';
+import {binPath} from '../utils/path';
+import {spawn} from '../utils/spawn';
 
 export const lint = async () => {
   const tslint = binPath('tslint');

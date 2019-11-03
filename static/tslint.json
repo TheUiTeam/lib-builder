@@ -17,20 +17,6 @@
     "no-var-requires": false,
     "jsx-no-lambda": false,
     "max-classes-per-file": false,
-    "jsx-self-close": false,
-
-    "normalize-import": true,
-    "origin-import-grouping": {
-      "options": {
-        "order": [
-          "**",
-          "startsWith:@atlas",
-          "startsWith:common/",
-          "startsWith:bux/",
-          "startsWith:utilities/",
-          "startsWithAny:.;/"
-        ]
-      }
-    }
+    "jsx-self-close": false
   }
 }
