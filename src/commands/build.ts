@@ -1,5 +1,5 @@
-import { spawn } from 'child_process';
-import { writeFileSync } from 'fs';
+import {spawn} from 'child_process';
+import {writeFileSync} from 'fs';
 import * as tmp from 'tmp';
 import {green, red} from '../utils/log';
 import {binPath} from '../utils/path';
@@ -7,30 +7,21 @@ import {binPath} from '../utils/path';
 const cwd = process.cwd();
 
 const es5Config = {
-  'importHelpers': true,
-  'noImplicitAny': true,
-  'removeComments': false,
-  'allowSyntheticDefaultImports': true,
-  'esModuleInterop': true,
   'declaration': true,
   'outDir': `${cwd}/dist/es5`,
-  'lib': ['dom', 'es6'],
   'target': 'es5',
-  'jsx': 'react',
-  'moduleResolution': 'node'
 };
 
 const es2015Config = {
   ...es5Config,
   'outDir': `${cwd}/dist/es2015`,
-    'lib': ['dom', 'es6'],
-    'module': 'es2015',
-    'moduleResolution': 'node'
+  'module': 'es2015',
 };
 
-const makeConfig = (options:any) => ({
+const makeConfig = (options: any) => ({
+  'extends': cwd + '/tsconfig.json',
   'compilerOptions': options,
-  'include': [`${cwd}/src/**/*.ts`, `${cwd}/src/**/*.tsx`]
+  // 'include': [`${cwd}/src/**/*.ts`, `${cwd}/src/**/*.tsx`]
 });
 
 const tscBin = binPath('tsc');
