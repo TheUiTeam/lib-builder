@@ -21,7 +21,7 @@ const es2015Config = {
 const makeConfig = (options: any) => ({
   'extends': cwd + '/tsconfig.json',
   'compilerOptions': options,
-  // 'include': [`${cwd}/src/**/*.ts`, `${cwd}/src/**/*.tsx`]
+  'include': [`${cwd}/src/**/*.ts`, `${cwd}/src/**/*.tsx`]
 });
 
 const tscBin = binPath('tsc');
