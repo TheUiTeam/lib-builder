@@ -1,4 +1,4 @@
-# uiteam / build
+# uiteam / lib-builder
 > Opinionated toolbox boilerplate to create Typescript React components, based on [ts-react-toolbox](https://github.com/zzarcon/ts-react-toolbox)
 
 # Install
