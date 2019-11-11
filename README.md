@@ -28,8 +28,8 @@ That will add all the boilerplate and scripts to your project
 * Prettier ✅
 * ES5 support ✅
 * ES2015 support ✅
-* Git hooks ❌
-* Bundle size analyzer ❌
+* Git hooks ✅
+* Bundle size analyzer ✅
 
 # Folder structure
 
