@@ -1,4 +1,4 @@
-# uiteam / build
+# uiteam / lib-builder
 > Opinionated toolbox boilerplate to create Typescript React components, based on [ts-react-toolbox](https://github.com/zzarcon/ts-react-toolbox)
 
 # Install
@@ -28,8 +28,8 @@ That will add all the boilerplate and scripts to your project
 * Prettier ✅
 * ES5 support ✅
 * ES2015 support ✅
-* Git hooks ❌
-* Bundle size analyzer ❌
+* Git hooks ✅
+* Bundle size analyzer ✅
 
 # Folder structure
 
