@@ -39,7 +39,10 @@ const modifyPackage = async () => {
       format: 'lib-builder format',
       update: 'lib-builder update',
       'docz:dev': 'docz dev',
-      'docz:build': 'docz build'
+      'docz:build': 'docz build',
+      'prepublish': "yarn build && yarn changelog",
+      "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+      "changelog:rewrite": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
     },
     peerDependencies: {
       react: '^16.9.0',

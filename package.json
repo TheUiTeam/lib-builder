@@ -24,6 +24,7 @@
     "@types/react-dom": "^16.9.4",
     "chalk": "^2.3.2",
     "codecov": "^3.6.1",
+    "conventional-changelog-cli": "^2.0.28",
     "docz": "^2.0.0-rc.66",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
