@@ -1,6 +1,6 @@
 {
   "name": "@theuiteam/lib-builder",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Opinionated toolbox boilerplate to create Typescript React components",
   "main": "dist/index.js",
   "repository": "https://github.com/theuiteam/lib-builder",
