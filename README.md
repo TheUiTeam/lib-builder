@@ -4,7 +4,7 @@
 # Install
 
 ```
-yarn add --dev @theuiteam/build
+yarn add --dev @theuiteam/lib-builder
 ```
 
 # Setup
@@ -12,7 +12,7 @@ yarn add --dev @theuiteam/build
 After you have installed it, run this from the root of your package:
 
 ```
-$ node_modules/.bin/team-build init
+$ node_modules/.bin/lib-builder init
 ```
 
 That will add all the boilerplate and scripts to your project
@@ -40,9 +40,10 @@ That will add all the boilerplate and scripts to your project
 # Commands
 
 * **init**: Initializes project
-* **dev**: webpack-dev-server
 * **test**: jest + watch mode
 * **build**: Typescript build
+* **docz:dev** Dev mode
+
 * **release**: build + run tests + version bump + publish to registry
 * **static**: deploys example to github pages
 * **lint**: tslint
