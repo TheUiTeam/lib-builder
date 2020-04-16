@@ -46,8 +46,14 @@ const modifyPackage = async () => {
     },
     peerDependencies: {
       react: '^16.9.0',
-      '@types/react': '^16.9.0',
+      '@types/react': '^16.0.0',
       ...pkg.peerDependencies,
+    },
+    peerDependenciesMeta: {
+      "@types/react": {
+        "optional": true
+      },
+      ...pkg.peerDependenciesMeta,
     },
     dependencies: {
       tslib: '^1.9.3',
