@@ -3,9 +3,9 @@ import {binPath} from '../utils/path';
 import {spawn} from '../utils/spawn';
 
 export const lint = async () => {
-  const tslint = binPath('tslint');
+  const tslint = binPath('eslint');
 
-  green('Running TSLint 🌯');
+  green('Running Eslint 🌯');
   await spawn(tslint, [
     '--format',
     'stylish',

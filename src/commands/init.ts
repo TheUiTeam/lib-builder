@@ -74,7 +74,7 @@ const modifyPackage = async () => {
     'lint-staged': {
       '*.{ts,tsx}': [
         'prettier --write',
-        'tslint --fix',
+        'eslint --fix',
         'git add'
       ],
       '*.{js,css,json,md}': [
