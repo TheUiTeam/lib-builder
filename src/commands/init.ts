@@ -22,6 +22,7 @@ const modifyPackage = async () => {
     ...pkg,
     main: 'dist/es5/index.js',
     module: 'dist/es2015/index.js',
+    'module:es2019': 'dist/es2019/index.js',
     types: 'dist/es5/index.d.ts',
     engines: {
       node: '>=10'
