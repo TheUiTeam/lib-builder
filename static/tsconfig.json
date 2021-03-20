@@ -12,8 +12,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
-    "removeComments": true,
     "importHelpers": true,
+    "isolatedModules": true,
     "target": "es6",
     "moduleResolution": "node",
     "lib": [

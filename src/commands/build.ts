@@ -18,6 +18,13 @@ const es2015Config = {
   'module': 'es2015',
 };
 
+const es2019Config = {
+  ...es5Config,
+  'target': 'ES2019',
+  'outDir': `${cwd}/dist/es2019`,
+  'module': 'es2015',
+};
+
 const makeConfig = (options: any) => ({
   'extends': cwd + '/tsconfig.json',
   'compilerOptions': options,
@@ -25,13 +32,14 @@ const makeConfig = (options: any) => ({
 });
 
 const tscBin = binPath('tsc');
-const buildES5 = (): Promise<void> => {
-  return new Promise((resolve) => {
-    green('Creating ES5 dist 🌟');
+
+const buildTarget = (config: any) => (
+  new Promise((resolve) => {
+    green(`Creating ${config.target} dist 🌟`);
 
     const tmpobj = tmp.fileSync();
     const configPath = tmpobj.name;
-    writeFileSync(configPath, JSON.stringify(makeConfig(es5Config), null, ' '));
+    writeFileSync(configPath, JSON.stringify(makeConfig(config), null, ' '));
     // NODE_ENV=production
     const subprocess = spawn(tscBin, ['-p', configPath], {
       env: {...process.env, FORCE_COLOR: 'true'},
@@ -40,34 +48,18 @@ const buildES5 = (): Promise<void> => {
 
     subprocess.on('exit', () => {
       tmpobj.removeCallback();
-      resolve();
+      resolve(undefined);
     });
-  });
-};
-
-const buildES2015 = () => {
-  return new Promise((resolve) => {
-    green('Creating ES2015 dist 🌟🌟');
-
-    const tmpobj = tmp.fileSync();
-    const configPath = tmpobj.name;
-    writeFileSync(configPath, JSON.stringify(makeConfig(es2015Config), null, ' '));
-    const subprocess = spawn(tscBin, ['-p', configPath], {
-      env: {...process.env, FORCE_COLOR: 'true'},
-      stdio: 'inherit'
-    });
-
-    subprocess.on('exit', () => {
-      tmpobj.removeCallback();
-      resolve();
-    });
-  });
-};
+  })
+);
 
 export const build = async () => {
   try {
-    await buildES5();
-    await buildES2015();
+    await Promise.all([
+      buildTarget(es5Config),
+      buildTarget(es2015Config),
+      buildTarget(es2019Config),
+    ])
   } catch (e) {
     red(e);
     process.exit(1);

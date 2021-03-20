@@ -38,15 +38,13 @@ const modifyPackage = async () => {
       lint: 'lib-builder lint',
       format: 'lib-builder format',
       update: 'lib-builder update',
-      'docz:dev': 'docz dev',
-      'docz:build': 'docz build',
       'prepublish': "yarn build && yarn changelog",
       "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
       "changelog:rewrite": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
     },
     peerDependencies: {
-      react: '^16.9.0',
-      '@types/react': '^16.0.0',
+      react: '^16.9.0 || ^17.0.0',
+      '@types/react': '^16.9.0 || ^17.0.0',
       ...pkg.peerDependencies,
     },
     peerDependenciesMeta: {
@@ -56,7 +54,7 @@ const modifyPackage = async () => {
       ...pkg.peerDependenciesMeta,
     },
     dependencies: {
-      tslib: '^1.9.3',
+      tslib: '^2.0.0',
       ...pkg.dependencies,
     },
     devDependencies: {
