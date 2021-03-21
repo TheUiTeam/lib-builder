@@ -35,7 +35,7 @@ const tscBin = binPath('tsc');
 
 const buildTarget = (config: any) => (
   new Promise((resolve) => {
-    green(`Creating ${config.target} dist 🌟`);
+    green(`Creating ${config.target}/${config.module} dist 🌟`);
 
     const tmpobj = tmp.fileSync();
     const configPath = tmpobj.name;
