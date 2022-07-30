@@ -1,14 +1,15 @@
-import {green} from '../utils/log';
-import {binPath} from '../utils/path';
-import {spawn} from '../utils/spawn';
+import { green } from "../utils/log";
+import { binPath } from "../utils/path";
+import { spawn } from "../utils/spawn";
 
 export const lint = async () => {
-  const tslint = binPath('eslint');
+  const tslint = binPath("eslint");
 
-  green('Running Eslint 🌯');
+  green("Running Eslint 🌯");
+
   await spawn(tslint, [
-    '--format',
-    'stylish',
-    './+(src|__tests__)/**/*.+(ts|tsx)'
+    "--format",
+    "stylish",
+    "./+(src|__tests__)/**/*.+(ts|tsx)",
   ]);
 };

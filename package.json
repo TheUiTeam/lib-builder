@@ -14,7 +14,8 @@
     "lint": "tslint src/**/*.ts --format stylish --fix",
     "cli": "./bin/lib-builder",
     "prepublish": "yarn add_permission && yarn build",
-    "release": "npm publish --access public"
+    "release": "npm publish --access public",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@size-limit/preset-small-lib": "^2.1.6",
@@ -51,6 +52,15 @@
     "configs",
     "static"
   ],
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint -c static/.eslintrc.js --fix"
+    ],
+    "*.{js,css,json,md}": [
+      "prettier --write"
+    ]
+  },
   "keywords": [],
   "devDependencies": {
     "@types/node": "^12.11.7",
