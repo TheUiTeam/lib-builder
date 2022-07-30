@@ -44,8 +44,8 @@ const modifyPackage = async () => {
       "changelog:rewrite": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
     },
     peerDependencies: {
-      react: '^16.9.0 || ^17.0.0',
-      '@types/react': '^16.9.0 || ^17.0.0',
+      react: '^16.9.0 || ^17.0.0 || ^18.0.0',
+      '@types/react': '^16.9.0 || ^17.0.0 || ^18.0.0',
       ...pkg.peerDependencies,
     },
     peerDependenciesMeta: {
@@ -55,11 +55,11 @@ const modifyPackage = async () => {
       ...pkg.peerDependenciesMeta,
     },
     dependencies: {
-      tslib: '^2.0.0',
+      tslib: '^2.1.0',
       ...pkg.dependencies,
     },
     devDependencies: {
-      '@theuiteam/lib-builder': '^0.0.1',
+      '@theuiteam/lib-builder': '^0.1.1',
       '@size-limit/preset-small-lib': '^2.1.6',
       ...pkg.devDependencies,
     },

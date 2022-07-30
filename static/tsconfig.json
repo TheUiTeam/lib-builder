@@ -32,6 +32,6 @@
     "typeRoots": [
       "./node_modules/@types"
     ],
-    "jsx": "react"
+    "jsx": "react-jsx"
   }
 }

@@ -5,6 +5,7 @@ yarn-error.log*
 lib-cov
 coverage
 .nyc_output
+.idea
 
 dist
 node_modules/
