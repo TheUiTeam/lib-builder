@@ -63,6 +63,7 @@ const modifyPackage = async () => {
     },
     devDependencies: {
       "@theuiteam/lib-builder": "^0.1.1",
+      "@size-limit/preset-small-lib": "^8.1.2",
       ...pkg.devDependencies,
     },
     files: ["dist"],
