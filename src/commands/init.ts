@@ -35,12 +35,12 @@ const modifyPackage = async () => {
       "test:ci": "jest --runInBand --coverage",
       build: "lib-builder build && yarn size:report",
       release: "yarn build && yarn test",
-      size: "npx size-limit",
-      "size:report": "npx size-limit --json > .size.json",
+      size: "size-limit",
+      "size:report": "size-limit --json > .size.json",
       lint: "lib-builder lint",
       format: "lib-builder format",
       update: "lib-builder update",
-      "prepublish-only": "yarn build && yarn changelog",
+      prepack: "yarn build && yarn changelog",
       prepare: "husky install",
       changelog: "conventional-changelog -p angular -i CHANGELOG.md -s",
       "changelog:rewrite":
@@ -63,17 +63,11 @@ const modifyPackage = async () => {
     },
     devDependencies: {
       "@theuiteam/lib-builder": "^0.1.1",
-      "@size-limit/preset-small-lib": "^2.1.6",
       ...pkg.devDependencies,
     },
     files: ["dist"],
     keywords: pkg.keywords || [],
     repository: pkg.repository || "",
-    husky: {
-      hooks: {
-        "pre-commit": "lint-staged",
-      },
-    },
     "lint-staged": {
       "*.{ts,tsx}": ["prettier --write", "eslint --fix"],
       "*.{js,css,json,md}": ["prettier --write"],
