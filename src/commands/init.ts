@@ -13,12 +13,12 @@ const copyStatic = async () => {
 };
 
 const modifyPackage = async () => {
-  green("Modifing package ⛏");
+  green("Modifying package ⛏");
 
   const writeFile = promisify(fs.writeFile);
   const pkgPath = path.resolve("./package.json");
   const pkg = require(pkgPath);
-  // TODO: Add precommit config
+
   const newPkg = {
     ...pkg,
     main: "dist/es5/index.js",
@@ -80,6 +80,7 @@ const modifyPackage = async () => {
       semi: true,
       singleQuote: true,
     },
+    packageManager: "yarn@1.22.19",
   };
 
   await writeFile(pkgPath, JSON.stringify(newPkg, null, 2));

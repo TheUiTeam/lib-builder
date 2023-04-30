@@ -66,5 +66,6 @@
   "devDependencies": {
     "@types/node": "^12.11.7",
     "@types/tmp": "^0.0.33"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
