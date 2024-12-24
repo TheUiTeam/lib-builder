@@ -2,8 +2,8 @@ import * as fs from "fs";
 import * as path from "path";
 import { promisify } from "util";
 
-import { exec } from "../utils/exec";
-import { green, red } from "../utils/log";
+import { exec } from "../utils/exec.ts";
+import { green, red } from "../utils/log.ts";
 
 const copyStatic = async () => {
   green("Copying files 📂");
@@ -91,7 +91,7 @@ export const init = async () => {
     await modifyPackage();
     await copyStatic();
     green("Project created 🚀");
-  } catch (err) {
+  } catch (err: any) {
     red(err);
   }
 };

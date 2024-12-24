@@ -1,11 +1,11 @@
 import { spawn as nativeSpawn, SpawnOptions } from "child_process";
 
-import { red, white } from "./log";
+import { red, white } from "./log.ts";
 
 export const spawn = (
   command: string,
   args: string[],
-  options?: SpawnOptions
+  options?: SpawnOptions,
 ) =>
   new Promise((resolve, reject) => {
     const child = nativeSpawn(command, args, {

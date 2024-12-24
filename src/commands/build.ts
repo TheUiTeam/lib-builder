@@ -3,8 +3,8 @@ import { writeFileSync } from "fs";
 
 import * as tmp from "tmp";
 
-import { green, red } from "../utils/log";
-import { binPath } from "../utils/path";
+import { green, red } from "../utils/log.ts";
+import { binPath } from "../utils/path.ts";
 
 const cwd = process.cwd();
 
@@ -62,7 +62,7 @@ export const build = async () => {
       buildTarget(es2015Config),
       buildTarget(es2019Config),
     ]);
-  } catch (e) {
+  } catch (e: any) {
     red(e);
     process.exit(1);
   }

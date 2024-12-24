@@ -1,5 +1,5 @@
-import { green } from "../utils/log";
-import { spawn } from "../utils/spawn";
+import { green } from "../utils/log.ts";
+import { spawn } from "../utils/spawn.ts";
 
 export const update = async () => {
   green("Updating lib-builder 🌯");

@@ -11,41 +11,42 @@
   "scripts": {
     "build": "node_modules/.bin/tsc",
     "add_permission": "chmod +x ./bin/lib-builder",
-    "lint": "tslint src/**/*.ts --format stylish --fix",
+    "lint": "eslint src/**/*.ts --fix",
     "cli": "./bin/lib-builder",
     "prepack": "yarn add_permission && yarn build",
     "release": "npm publish --access public",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@size-limit/preset-small-lib": "^8.1.2",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@types/jest": "^29.2.6",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
+    "@size-limit/preset-small-lib": "^11.1.6",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
     "chalk": "^2.3.2",
     "codecov": "^3.6.1",
     "conventional-changelog-cli": "^2.0.28",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-import-resolver-typescript": "^3.5.3",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "husky": "^7.0.0",
-    "jest": "^29.3.1",
+    "jest": "^29.7.0",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.7.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "size-limit": "^8.1.2",
+    "prettier": "^3.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "size-limit": "^11.1.6",
     "tmp": "^0.0.33",
-    "ts-jest": "^29.0.5",
+    "ts-jest": "^29.2.5",
     "tslib": "^2.0.0",
-    "typescript": "^4.2.3"
+    "typescript": "^5.7.0"
   },
   "files": [
     "dist",
@@ -56,7 +57,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
-      "eslint -c static/.eslintrc.js --fix"
+      "eslint -c static/eslint.config.mjs --fix"
     ],
     "*.{js,css,json,md}": [
       "prettier --write"
@@ -64,7 +65,7 @@
   },
   "keywords": [],
   "devDependencies": {
-    "@types/node": "^12.11.7",
+    "@types/node": "^20.10.2",
     "@types/tmp": "^0.0.33"
   },
   "packageManager": "yarn@1.22.19"

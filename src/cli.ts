@@ -1,8 +1,8 @@
-import * as commands from './commands';
+import * as commands from "./commands/index.ts";
 
 const [, , command] = process.argv;
 
-export type Command = keyof typeof commands
+export type Command = keyof typeof commands;
 
 const isCommand = (command: string): command is Command => {
   return Object.keys(commands).indexOf(command) >= 0;

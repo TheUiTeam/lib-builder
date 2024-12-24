@@ -21,6 +21,7 @@ module.exports = {
         groups: ['builtin', 'external', 'internal', ['parent', 'index', 'sibling']],
       },
     ],
+    "import/extensions": ["err", "ignorePackages"],
     "padding-line-between-statements": [
       "error",
       // IMPORT

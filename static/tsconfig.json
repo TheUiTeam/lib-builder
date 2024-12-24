@@ -11,11 +11,13 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "rewriteRelativeImportExtensions": true,
     "noImplicitAny": true,
     "importHelpers": true,
     "isolatedModules": true,
     "target": "es6",
-    "moduleResolution": "node",
+    "module": "Node16",
+    "moduleResolution": "node16",
     "lib": [
       "dom",
       "es5",
@@ -25,13 +27,8 @@
       "es2015.iterable",
       "es2015.promise"
     ],
-    "types": [
-      "node",
-      "jest"
-    ],
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "types": ["node", "jest"],
+    "typeRoots": ["./node_modules/@types"],
     "jsx": "react-jsx"
   }
 }

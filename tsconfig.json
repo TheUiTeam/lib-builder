@@ -16,6 +16,9 @@
     "noImplicitReturns": true,
     "importHelpers": true,
     "noFallthroughCasesInSwitch": true,
+    "rewriteRelativeImportExtensions": true,
+    "module": "Node16",
+    "moduleResolution": "node16",
     "lib": [
       "dom",
       "es2015",
