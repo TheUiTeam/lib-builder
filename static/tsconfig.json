@@ -16,8 +16,7 @@
     "importHelpers": true,
     "isolatedModules": true,
     "target": "es6",
-    "module": "Node16",
-    "moduleResolution": "node16",
+    "moduleResolution": "node",
     "lib": [
       "dom",
       "es5",

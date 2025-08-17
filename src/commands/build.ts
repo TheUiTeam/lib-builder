@@ -18,13 +18,8 @@ const es2015Config = {
   ...es5Config,
   outDir: `${cwd}/dist/es2015`,
   module: "es2015",
-};
-
-const es2019Config = {
-  ...es5Config,
-  target: "ES2019",
-  outDir: `${cwd}/dist/es2019`,
-  module: "es2015",
+  moduleResolution: "node",
+  verbatimModuleSyntax: true,
 };
 
 const makeConfig = (options: any) => ({
@@ -55,13 +50,15 @@ const buildTarget = (config: any) =>
     });
   });
 
+const esmify = () => {
+  writeFileSync(`${es2015Config.outDir}/package.json`, `{"type": "module"}`);
+};
+
 export const build = async () => {
   try {
-    await Promise.all([
-      buildTarget(es5Config),
-      buildTarget(es2015Config),
-      buildTarget(es2019Config),
-    ]);
+    await Promise.all([buildTarget(es5Config), buildTarget(es2015Config)]);
+
+    await esmify();
   } catch (e: any) {
     red(e);
     process.exit(1);
