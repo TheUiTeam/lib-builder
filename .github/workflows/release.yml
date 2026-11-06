@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          # npm trusted publishing needs npm 11.5.1 or newer
+          node-version: 24
+          cache: yarn
+      - name: Check the tag equals the package version
+        run: |
+          version="v$(node -p "require('./package.json').version")"
+          if [ "$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::tag $GITHUB_REF_NAME does not match package.json $version"
+            exit 1
+          fi
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn jest
+      # --ignore-scripts: the steps above built dist, nothing writes to the tree here
+      - run: npm publish --provenance --access public --ignore-scripts
