@@ -7,20 +7,22 @@ export const spawn = (
   args: string[],
   options?: SpawnOptions,
 ) =>
-  new Promise((resolve, reject) => {
+  new Promise<void>((resolve, reject) => {
     const child = nativeSpawn(command, args, {
       ...options,
       env: { ...process.env, FORCE_COLOR: "true" },
     });
 
-    child.stdout!.on("data", white);
-    child.stderr!.on("data", red);
+    child.stdout?.on("data", (chunk: Buffer) => white(chunk.toString()));
+    child.stderr?.on("data", (chunk: Buffer) => red(chunk.toString()));
+
+    child.on("error", reject);
 
     child.on("close", (code) => {
-      if (code !== 0) {
-        reject();
+      if (code === 0) {
+        resolve();
+      } else {
+        reject(new Error(`${command} exited with code ${code}`));
       }
-
-      resolve(undefined);
     });
   });

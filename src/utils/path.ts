@@ -1,10 +1,8 @@
 import { existsSync } from "fs";
 import { resolve } from "path";
 
-const cwd = process.cwd();
-
 export const binPath = (binName: string): string => {
-  let path = cwd;
+  let path = process.cwd();
 
   while (path) {
     const file = resolve(path, "node_modules", ".bin", binName);
@@ -23,6 +21,4 @@ export const binPath = (binName: string): string => {
   }
 
   throw new Error(`could not find command: [${binName}]`);
-
-  return "error";
 };

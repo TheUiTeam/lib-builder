@@ -1,4 +1,5 @@
 import * as commands from "./commands/index.ts";
+import { red } from "./utils/log.ts";
 
 const [, , command] = process.argv;
 
@@ -9,7 +10,10 @@ const isCommand = (command: string): command is Command => {
 };
 
 if (isCommand(command)) {
-  commands[command]();
+  commands[command]().catch((error: Error) => {
+    red(error.message);
+    process.exitCode = 1;
+  });
 } else {
   throw new Error(`invalid command name ${command}`);
 }

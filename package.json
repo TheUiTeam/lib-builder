@@ -3,18 +3,22 @@
   "version": "1.1.0",
   "description": "Opinionated toolbox boilerplate to create Typescript React components",
   "main": "dist/index.js",
-  "repository": "https://github.com/theuiteam/lib-builder",
+  "repository": "https://github.com/TheUiTeam/lib-builder",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.18"
+  },
   "bin": {
     "lib-builder": "./bin/lib-builder"
   },
   "scripts": {
     "build": "node_modules/.bin/tsc",
+    "pretest": "yarn build",
+    "test": "jest",
     "add_permission": "chmod +x ./bin/lib-builder",
     "lint": "eslint src/**/*.ts --fix",
     "cli": "./bin/lib-builder",
     "prepack": "yarn add_permission && yarn build",
-    "release": "npm publish --access public",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -43,7 +47,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "size-limit": "^11.1.6",
-    "tmp": "^0.0.33",
+    "tmp": "^0.2.7",
     "ts-jest": "^29.4.1",
     "tslib": "^2.0.0",
     "typescript": "^5.7.0"
@@ -66,7 +70,7 @@
   "keywords": [],
   "devDependencies": {
     "@types/node": "^20.10.2",
-    "@types/tmp": "^0.0.33"
+    "@types/tmp": "^0.2.6"
   },
   "packageManager": "yarn@1.22.19"
 }
