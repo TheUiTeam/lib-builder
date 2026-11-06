@@ -73,7 +73,10 @@
   "keywords": [],
   "devDependencies": {
     "@types/node": "^20.10.2",
-    "@types/tmp": "^0.2.6"
+    "@types/tmp": "^0.2.6",
+    "@variance-authority/cli": "0.24.1",
+    "@variance-authority/help": "0.24.1",
+    "@variance-authority/sense": "0.24.1"
   },
   "packageManager": "yarn@1.22.19"
 }
