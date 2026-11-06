@@ -31,7 +31,7 @@ const makeDefaults = (builderVersion: string) => ({
     format: "lib-builder format",
     update: "lib-builder update",
     prepack: "yarn build && yarn changelog",
-    prepare: "husky install",
+    prepare: "husky",
     changelog: "conventional-changelog -p angular -i CHANGELOG.md -s",
     "changelog:rewrite":
       "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",

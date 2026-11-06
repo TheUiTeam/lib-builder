@@ -22,7 +22,7 @@
     "lint": "eslint src/**/*.ts --fix",
     "cli": "./bin/lib-builder",
     "prepack": "yarn add_permission && yarn build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@size-limit/preset-small-lib": "^11.1.6",
@@ -42,8 +42,8 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.7",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "husky": "^7.0.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "husky": "^9.1.7",
     "jest": "^30.5.2",
     "lint-staged": "^15",
     "prettier": "^3.9.10",

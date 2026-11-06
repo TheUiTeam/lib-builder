@@ -33,7 +33,12 @@ describe("lib-builder init", () => {
     expect(pkg.devDependencies["@theuiteam/lib-builder"]).toBe(`^${version}`);
     expect(existsSync(join(project, "tsconfig.json"))).toBe(true);
     expect(existsSync(join(project, "src/index.ts"))).toBe(true);
-    expect(existsSync(join(project, ".husky/pre-commit"))).toBe(true);
+    expect(pkg.scripts.prepare).toBe("husky");
+
+    expect(readFileSync(join(project, ".husky/pre-commit"), "utf8")).toBe(
+      "yarn lint-staged\n",
+    );
+
     expect(existsSync(join(project, "static"))).toBe(false);
     expect(existsSync(join(project, ".github/workflows/ci.yml"))).toBe(true);
     expect(existsSync(join(project, ".travis.yml"))).toBe(false);
