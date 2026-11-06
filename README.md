@@ -43,7 +43,7 @@ $ node_modules/.bin/lib-builder init
 - **build**: compiles `src` to `dist/es5` and `dist/es2015`, and exits non-zero when the compiler reports an error
 - **lint**: eslint over `src` and `__tests__`
 - **format**: prettier over `src`
-- **update**: updates lib-builder with `yarn add --dev`
+- **update**: updates lib-builder with the manager `packageManager` names, or the lockfile shows, and otherwise yarn
 
 # Entry points
 

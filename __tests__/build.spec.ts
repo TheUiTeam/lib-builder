@@ -15,6 +15,8 @@ import {
   readJson,
   runCli,
 } from "./helpers/fixture.ts";
+import { binPath } from "../src/utils/path.ts";
+
 
 const tsconfig = JSON.stringify({
   compilerOptions: { strict: true, lib: ["es2015", "dom"], types: [] },
@@ -93,15 +95,21 @@ describe("lib-builder build", () => {
     expect(tempConfigs(temp)).toEqual([]);
   });
 
-  it("exits non-zero when no compiler can be found", () => {
+  it("finds its own compiler when the project links only what it declares", () => {
     const project = makeProject(
-      { "tsconfig.json": tsconfig, "src/index.ts": "export {};\n" },
+      { "tsconfig.json": tsconfig, "src/index.ts": "export const one = 1;\n" },
       { linkModules: false },
     );
 
-    const { status, output } = runCli(project, "build");
+    const { status } = runCli(project, "build");
 
-    expect(output).toContain("could not find command: [tsc]");
-    expect(status).toBe(1);
+    expect(status).toBe(0);
+    expect(existsSync(join(project, "dist/es5/index.js"))).toBe(true);
+  });
+
+  it("names a tool neither the project nor lib-builder provides", () => {
+    expect(() => binPath("no-such-tool")).toThrow(
+      "could not find command: [no-such-tool]",
+    );
   });
 });
