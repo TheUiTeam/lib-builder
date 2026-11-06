@@ -1,3 +1,4 @@
+import { spawnSync } from "child_process";
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 
@@ -36,6 +37,25 @@ describe("lib-builder init", () => {
     expect(existsSync(join(project, "static"))).toBe(false);
     expect(existsSync(join(project, ".github/workflows/ci.yml"))).toBe(true);
     expect(existsSync(join(project, ".travis.yml"))).toBe(false);
+  });
+
+  it("sets up tests that import a source by its .ts name", () => {
+    const project = makeProject({
+      "package.json": '{"name":"fresh","version":"1.0.0"}',
+      "__tests__/extension.spec.ts":
+        "import '../src/index.ts';\n\ntest('loads', () => {});\n",
+    });
+
+    runCli(project, "init");
+
+    const { status, stderr } = spawnSync(
+      join(project, "node_modules/.bin/jest"),
+      ["__tests__/extension.spec.ts"],
+      { cwd: project, encoding: "utf8" },
+    );
+
+    expect(stderr).toContain("1 passed");
+    expect(status).toBe(0);
   });
 
   it("keeps what the project already declares and the files it already has", () => {
