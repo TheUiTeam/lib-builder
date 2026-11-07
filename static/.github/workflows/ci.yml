@@ -23,12 +23,14 @@ jobs:
       - run: __RUN__ test:ci
       - name: Check the packed entry points
         run: |
-          npm pack --dry-run --json --ignore-scripts | node -e '
-            const [{ files }] = JSON.parse(require("fs").readFileSync(0, "utf8"));
-            const packed = new Set(files.map((file) => file.path));
+          # the tarball, not npm's stdout: npm 10 runs prepare even under --ignore-scripts
+          packed="$(mktemp -d)"
+          npm pack --ignore-scripts --pack-destination "$packed" > /dev/null
+          tar -tzf "$packed"/*.tgz | node -e '
+            const files = new Set(require("fs").readFileSync(0, "utf8").split("\n"));
             const { main, module, types } = require("./package.json");
             const missing = [main, module, types].filter(
-              (entry) => entry && !packed.has(entry.replace(/^\.\//, "")),
+              (entry) => entry && !files.has("package/" + entry.replace(/^\.\//, "")),
             );
             if (missing.length) throw new Error("not in the package: " + missing);
           '

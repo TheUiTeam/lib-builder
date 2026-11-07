@@ -212,9 +212,14 @@ describe("the generated workflow", () => {
       return block;
     };
 
-    const check = (built: string[]) => {
+    const check = (built: string[], scripts: Record<string, string> = {}) => {
       const { project, workflow } = init({
-        "package.json": manifest("npm@11.19.0"),
+        "package.json": JSON.stringify({
+          name: "fixture",
+          version: "1.0.0",
+          packageManager: "npm@11.19.0",
+          scripts,
+        }),
       });
 
       built.forEach((file) => {
@@ -234,6 +239,16 @@ describe("the generated workflow", () => {
         "dist/es5/index.d.ts",
         "dist/es2015/index.js",
       ]);
+
+      expect(status).toBe(0);
+    });
+
+    // npm 10 runs `prepare` even under --ignore-scripts, and to stdout
+    it("reads the package, whatever a script prints while it packs", () => {
+      const { status } = check(
+        ["dist/es5/index.js", "dist/es5/index.d.ts", "dist/es2015/index.js"],
+        { prepare: "echo noise from prepare", prepack: "echo noise" },
+      );
 
       expect(status).toBe(0);
     });
