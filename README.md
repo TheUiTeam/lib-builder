@@ -20,6 +20,10 @@ $ node_modules/.bin/lib-builder init
 
 `init` fills in the `package.json` fields and scripts your package does not have yet, and copies the configuration files it does not have yet. A value or a file you already have stays as it is, so `init` can be run again. The exceptions are the placeholders `npm init` writes, `"main": "index.js"` and the `no test specified` test script, which it replaces.
 
+The scripts, the GitHub Actions workflow and the pre-commit hook are written for your package manager: the one `packageManager` names, otherwise the one a lockfile shows. A project with neither gets yarn, and a `packageManager` field that says so. A manager other than npm, pnpm or yarn stops `init` and `update` with an error. A pnpm project with no `packageManager` gets a workflow on the latest pnpm; declare one to pin it.
+
+The workflow builds the library, runs `test:ci`, and checks that the packed package holds `main`, `module` and `types`.
+
 # Contains
 
 - Typescript ✅
@@ -43,7 +47,7 @@ $ node_modules/.bin/lib-builder init
 - **build**: compiles `src` to `dist/es5` and `dist/es2015`, and exits non-zero when the compiler reports an error
 - **lint**: eslint over `src` and `__tests__`
 - **format**: prettier over `src`
-- **update**: updates lib-builder with the manager `packageManager` names, or the lockfile shows, and otherwise yarn
+- **update**: updates lib-builder with your package manager, chosen as `init` chooses it
 
 # Entry points
 
