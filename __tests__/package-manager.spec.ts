@@ -32,8 +32,13 @@ const fakeManagers = (project: string) => {
   return { PATH: `${bin}${delimiter}${process.env.PATH}` };
 };
 
-const update = (files: Record<string, string>) => {
+const update = (files: Record<string, string>, { initFirst = false } = {}) => {
   const project = makeProject(files, { linkModules: false });
+
+  if (initFirst) {
+    runCli(project, "init");
+  }
+
   const { status } = runCli(project, "update", fakeManagers(project));
 
   expect(status).toBe(0);
@@ -59,6 +64,29 @@ describe("lib-builder update", () => {
     ["yarn.lock", "yarn add --dev @theuiteam/lib-builder"],
   ])("falls back to the manager that owns %s", (lockfile, command) => {
     expect(update({ "package.json": "{}", [lockfile]: "" })).toBe(command);
+  });
+
+  it.each([
+    ["package-lock.json", "npm install --save-dev @theuiteam/lib-builder"],
+    ["pnpm-lock.yaml", "pnpm add --save-dev @theuiteam/lib-builder"],
+    ["yarn.lock", "yarn add --dev @theuiteam/lib-builder"],
+  ])("picks the same manager for %s after init", (lockfile, command) => {
+    expect(
+      update({ "package.json": "{}", [lockfile]: "" }, { initFirst: true }),
+    ).toBe(command);
+  });
+
+  it("refuses a manager it cannot run rather than run another", () => {
+    const project = makeProject(
+      { "package.json": manifest("bun@1.3.0") },
+      { linkModules: false },
+    );
+
+    const { status, output } = runCli(project, "update", fakeManagers(project));
+
+    expect(status).toBe(1);
+    expect(output).toContain("bun@1.3.0");
+    expect(existsSync(join(project, "ran.txt"))).toBe(false);
   });
 
   it("stays on yarn when nothing names a manager", () => {

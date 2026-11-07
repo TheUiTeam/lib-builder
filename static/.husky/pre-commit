@@ -1,1 +1,1 @@
-yarn lint-staged
+__EXEC__ lint-staged

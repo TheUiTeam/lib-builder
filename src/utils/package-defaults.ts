@@ -1,3 +1,5 @@
+import { DEFAULT_PACKAGE_MANAGER, PackageManager } from "./package-manager.ts";
+
 type Dictionary = Record<string, string>;
 
 export interface PackageJson {
@@ -16,21 +18,24 @@ const PLACEHOLDER_TEST = 'echo "Error: no test specified" && exit 1';
 
 const SUPPORTED_REACT = "^16.9.0 || ^17.0.0 || ^18.0.0 || ^19.0.0";
 
-const makeDefaults = (builderVersion: string) => ({
+const makeDefaults = (
+  builderVersion: string,
+  { run, source }: PackageManager,
+) => ({
   main: "dist/es5/index.js",
   module: "dist/es2015/index.js",
   types: "dist/es5/index.d.ts",
   scripts: {
     test: "jest",
     "test:ci": "jest --runInBand --coverage",
-    build: "lib-builder build && yarn size:report",
-    release: "yarn build && yarn test",
+    build: `lib-builder build && ${run} size:report`,
+    release: `${run} build && ${run} test`,
     size: "size-limit",
     "size:report": "size-limit --json > .size.json",
     lint: "lib-builder lint",
     format: "lib-builder format",
     update: "lib-builder update",
-    prepack: "yarn build && yarn changelog",
+    prepack: `${run} build && ${run} changelog`,
     prepare: "husky",
     changelog: "conventional-changelog -p angular -i CHANGELOG.md -s",
     "changelog:rewrite":
@@ -66,7 +71,8 @@ const makeDefaults = (builderVersion: string) => ({
     semi: true,
     singleQuote: true,
   },
-  packageManager: "yarn@1.22.19",
+  // A lockfile already answers, and a pin nobody chose would only invent a version.
+  ...(source === "default" ? { packageManager: DEFAULT_PACKAGE_MANAGER } : {}),
 });
 
 /**
@@ -76,8 +82,9 @@ const makeDefaults = (builderVersion: string) => ({
 export const mergePackage = (
   pkg: PackageJson,
   builderVersion: string,
+  manager: PackageManager,
 ): PackageJson => {
-  const defaults = makeDefaults(builderVersion);
+  const defaults = makeDefaults(builderVersion, manager);
   const { main, ...declared } = pkg;
   const { test, ...scripts } = pkg.scripts ?? {};
 
