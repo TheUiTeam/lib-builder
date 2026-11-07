@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=18.18"
+    "node": "^22.19.0 || ^24.5.0 || >=26.0.0"
   },
   "bin": {
     "lib-builder": "bin/lib-builder"
@@ -25,7 +25,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@size-limit/preset-small-lib": "^11.1.6",
+    "@size-limit/preset-small-lib": "^14.3.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
     "@types/jest": "^30.0.0",
@@ -48,7 +48,7 @@
     "prettier": "^3.9.10",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "size-limit": "^11.1.6",
+    "size-limit": "^14.3.0",
     "tmp": "^0.2.7",
     "ts-jest": "^29.4.15",
     "tslib": "^2.9.1",
@@ -71,7 +71,7 @@
   },
   "keywords": [],
   "devDependencies": {
-    "@types/node": "^20.19.43",
+    "@types/node": "^22.19.0",
     "@types/tmp": "^0.2.6",
     "@variance-authority/cli": "0.26.0",
     "@variance-authority/help": "0.26.0",

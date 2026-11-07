@@ -50,7 +50,7 @@ const makeDefaults = (builderVersion: string) => ({
   },
   devDependencies: {
     "@theuiteam/lib-builder": `^${builderVersion}`,
-    "@size-limit/preset-small-lib": "^11.1.6",
+    "@size-limit/preset-small-lib": "^14.3.0",
   },
   files: ["dist"],
   keywords: [],
