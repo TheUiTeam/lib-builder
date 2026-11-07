@@ -1,4 +1,5 @@
-import { readFileSync } from "fs";
+import { spawnSync } from "child_process";
+import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
 import { afterEach, describe, expect, it } from "@jest/globals";
@@ -190,4 +191,61 @@ describe("the generated workflow", () => {
       expect(workflow).not.toContain("pnpm");
     },
   );
+
+  it("builds the library before it tests it", () => {
+    const { workflow } = init({ "package.json": manifest("npm@11.19.0") });
+
+    expect(stepOf(workflow, "- run: npm run build\n")).toBeLessThan(
+      stepOf(workflow, "- run: npm run test:ci\n"),
+    );
+  });
+
+  describe("entry point check", () => {
+    const script = (workflow: string) => {
+      const [, block] =
+        /name: Check the packed entry points\n\s+run: \|\n([\s\S]*)$/.exec(
+          workflow,
+        ) ?? [];
+
+      expect(block).toBeDefined();
+
+      return block;
+    };
+
+    const check = (built: string[]) => {
+      const { project, workflow } = init({
+        "package.json": manifest("npm@11.19.0"),
+      });
+
+      built.forEach((file) => {
+        mkdirSync(join(project, file, ".."), { recursive: true });
+        writeFileSync(join(project, file), "");
+      });
+
+      return spawnSync("bash", ["-e", "-c", script(workflow)], {
+        cwd: project,
+        encoding: "utf8",
+      });
+    };
+
+    it("passes when the package holds every entry point", () => {
+      const { status } = check([
+        "dist/es5/index.js",
+        "dist/es5/index.d.ts",
+        "dist/es2015/index.js",
+      ]);
+
+      expect(status).toBe(0);
+    });
+
+    it("fails and names the entry point the package lacks", () => {
+      const { status, stderr } = check([
+        "dist/es5/index.js",
+        "dist/es5/index.d.ts",
+      ]);
+
+      expect(status).not.toBe(0);
+      expect(stderr).toContain("dist/es2015/index.js");
+    });
+  });
 });

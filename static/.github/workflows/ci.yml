@@ -19,4 +19,16 @@ jobs:
           node-version-file: .nvmrc
           cache: __MANAGER__
       - run: __INSTALL__
+      - run: __RUN__ build
       - run: __RUN__ test:ci
+      - name: Check the packed entry points
+        run: |
+          npm pack --dry-run --json --ignore-scripts | node -e '
+            const [{ files }] = JSON.parse(require("fs").readFileSync(0, "utf8"));
+            const packed = new Set(files.map((file) => file.path));
+            const { main, module, types } = require("./package.json");
+            const missing = [main, module, types].filter(
+              (entry) => entry && !packed.has(entry.replace(/^\.\//, "")),
+            );
+            if (missing.length) throw new Error("not in the package: " + missing);
+          '
