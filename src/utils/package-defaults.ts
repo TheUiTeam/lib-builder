@@ -3,6 +3,7 @@ import { DEFAULT_PACKAGE_MANAGER, PackageManager } from "./package-manager.ts";
 type Dictionary = Record<string, string>;
 
 export interface PackageJson {
+  version?: string;
   main?: string;
   scripts?: Dictionary;
   peerDependencies?: Dictionary;
@@ -18,8 +19,48 @@ const PLACEHOLDER_TEST = 'echo "Error: no test specified" && exit 1';
 
 const SUPPORTED_REACT = "^16.9.0 || ^17.0.0 || ^18.0.0 || ^19.0.0";
 
+// Every package the generated scripts, hook and static configs call or load.
+// A strict linker such as pnpm links only what the project declares, so none
+// of them may come through lib-builder's own dependencies.
+const PROJECT_TOOLS = [
+  "@size-limit/preset-small-lib",
+  "@types/jest",
+  "@types/node",
+  "@typescript-eslint/eslint-plugin",
+  "@typescript-eslint/parser",
+  "conventional-changelog-cli",
+  "eslint",
+  "eslint-config-prettier",
+  "eslint-import-resolver-typescript",
+  "eslint-plugin-import",
+  "eslint-plugin-react",
+  "eslint-plugin-react-hooks",
+  "husky",
+  "jest",
+  "lint-staged",
+  "prettier",
+  "size-limit",
+  "ts-jest",
+  "typescript",
+];
+
+/** The tools, at the ranges lib-builder itself is tested with. */
+const projectTools = ({ dependencies, devDependencies }: PackageJson) => {
+  const ranges: Dictionary = { ...devDependencies, ...dependencies };
+
+  return Object.fromEntries(
+    PROJECT_TOOLS.map((name) => {
+      if (!ranges[name]) {
+        throw new Error(`lib-builder does not depend on ${name}`);
+      }
+
+      return [name, ranges[name]];
+    }),
+  );
+};
+
 const makeDefaults = (
-  builderVersion: string,
+  builder: PackageJson,
   { run, source }: PackageManager,
 ) => ({
   main: "dist/es5/index.js",
@@ -54,8 +95,8 @@ const makeDefaults = (
     tslib: "^2.1.0",
   },
   devDependencies: {
-    "@theuiteam/lib-builder": `^${builderVersion}`,
-    "@size-limit/preset-small-lib": "^14.3.0",
+    "@theuiteam/lib-builder": `^${builder.version}`,
+    ...projectTools(builder),
   },
   files: ["dist"],
   keywords: [],
@@ -81,10 +122,10 @@ const makeDefaults = (
  */
 export const mergePackage = (
   pkg: PackageJson,
-  builderVersion: string,
+  builder: PackageJson,
   manager: PackageManager,
 ): PackageJson => {
-  const defaults = makeDefaults(builderVersion, manager);
+  const defaults = makeDefaults(builder, manager);
   const { main, ...declared } = pkg;
   const { test, ...scripts } = pkg.scripts ?? {};
 

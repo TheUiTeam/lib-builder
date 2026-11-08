@@ -38,8 +38,8 @@ const modifyPackage = (manager: PackageManager) => {
   green("Modifying package ⛏");
 
   const pkgPath = resolve("./package.json");
-  const { version } = readJson(resolve(builderRoot, "package.json"));
-  const merged = mergePackage(readJson(pkgPath), version, manager);
+  const builder = readJson(resolve(builderRoot, "package.json"));
+  const merged = mergePackage(readJson(pkgPath), builder, manager);
 
   writeFileSync(pkgPath, `${JSON.stringify(merged, null, 2)}\n`);
 };
