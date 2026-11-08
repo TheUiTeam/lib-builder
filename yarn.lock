@@ -1928,257 +1928,257 @@
   resolved "https://registry.yarnpkg.com/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.13.0.tgz#46249f4bb36f4c2e8430baa98feab0c890444a7d"
   integrity sha512-DpLMlAqlrk4zBVK3DiDjwKD0oq7pZNy+8BiIBRuByqb6dm5jsdoLMhIiyh/xR7+WejaW/1Ui+XgbgMNa4+zWJg==
 
-"@variance-authority/cli@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/cli/-/cli-0.27.0.tgz#66df97f61a698ec53fa4c68c9cf3b9a297a60a6a"
-  integrity sha512-zVM6YXkiiIrbur9hz/tqfhswIkHY1cWX1Fp0B01+y9pWDHIrgasgiwjpT6UhQUD3+Xc4UCrS3sgsjbhsmc5Qaw==
+"@variance-authority/cli@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/cli/-/cli-0.28.0.tgz#fae3c327083c39a86c713d36dc6e89c3ce6731b6"
+  integrity sha512-KzwaUUu8RBRiUczwabvDVR4UtQs1qprm4ALgiRfyvaqfjdkc/gy9a6VhPuAIN2cN+OUbDFEXDOs0Gs+p2ja3og==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/distill" "^0.27.0"
-    "@variance-authority/eyes" "^0.27.0"
-    "@variance-authority/help" "^0.27.0"
-    "@variance-authority/history" "^0.27.0"
-    "@variance-authority/mcp" "^0.27.0"
-    "@variance-authority/observe" "^0.27.0"
-    "@variance-authority/playwright" "^0.27.0"
-    "@variance-authority/png" "^0.27.0"
-    "@variance-authority/png-sharp" "^0.27.0"
-    "@variance-authority/raster" "^0.27.0"
-    "@variance-authority/remote" "^0.27.0"
-    "@variance-authority/report" "^0.27.0"
-    "@variance-authority/sense" "^0.27.0"
-    "@variance-authority/store" "^0.27.0"
-    "@variance-authority/storybook" "^0.27.0"
-    "@variance-authority/vantage" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/distill" "^0.28.0"
+    "@variance-authority/eyes" "^0.28.0"
+    "@variance-authority/help" "^0.28.0"
+    "@variance-authority/history" "^0.28.0"
+    "@variance-authority/mcp" "^0.28.0"
+    "@variance-authority/observe" "^0.28.0"
+    "@variance-authority/playwright" "^0.28.0"
+    "@variance-authority/png" "^0.28.0"
+    "@variance-authority/png-sharp" "^0.28.0"
+    "@variance-authority/raster" "^0.28.0"
+    "@variance-authority/remote" "^0.28.0"
+    "@variance-authority/report" "^0.28.0"
+    "@variance-authority/sense" "^0.28.0"
+    "@variance-authority/store" "^0.28.0"
+    "@variance-authority/storybook" "^0.28.0"
+    "@variance-authority/vantage" "^0.28.0"
     ci-info "^4.4.0"
 
-"@variance-authority/core@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/core/-/core-0.27.0.tgz#ded730208ef81a6190de4d4adc9c42d1e69aca94"
-  integrity sha512-5u9L8raV1d17ox5UOp6VhpI7zMQKjV2ppDz1yFQ6LmJe/7tMt7yGhu1DCYdzSDus04yb+VfysrW+CC6yhyBQIA==
+"@variance-authority/core@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/core/-/core-0.28.0.tgz#23b7a5a5208750a647fa40e9908ea8ba24741b2a"
+  integrity sha512-49b541oK14f3goUGRew9aIv0xafCW9iBR9UeXcORGXDQkg/CM68IfYCIVi0I6ws5dScWMl93ARBvxGdAW1SyLQ==
 
-"@variance-authority/distill@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/distill/-/distill-0.27.0.tgz#3688c013f9c2720bc228554fad087a8c198baa8f"
-  integrity sha512-U4xXuE2gNklClP9iLm46DXQmJ0xtTE9UbJpm3G3mdpKhbE6FY4fC9aeFPJJqNEsnn68ajchN/MSy+CnsPmNMmA==
+"@variance-authority/distill@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/distill/-/distill-0.28.0.tgz#3494c03f0a0f809dd3dde1bbce03b9c4127b8d58"
+  integrity sha512-jVw79ZL1zRcXfTNfDOyEDXCaD9jXsRfPwTj9h1p3XyDi44MxeUerlrtt1LUl52ZWOGdDi2n0lnTK9/CaQIYa6A==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/eyes" "^0.27.0"
-    "@variance-authority/sense" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/eyes" "^0.28.0"
+    "@variance-authority/sense" "^0.28.0"
 
-"@variance-authority/dom@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/dom/-/dom-0.27.0.tgz#fab8f1a09a82733f22027a9c67c84893b964ba1b"
-  integrity sha512-/TE6ewNU7+6r/1T1Z/1BXY2ypzMJTMjdHVTsM3KNEW30Z038V2esBG6HvII/Wdrf7XCZf7dJa5xCa7eWEZJO1Q==
+"@variance-authority/dom@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/dom/-/dom-0.28.0.tgz#46fcd48acdb45a3eaea6362e0d05e6e7041323a6"
+  integrity sha512-0Gor0gnXKiSUkBbSdEW5wM9vz8UBTlymuJo3VdbjVx78g9xVfGlBZH/zoQBwy407EuC/jEhjLw+XWgA6Zs6PuA==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
 
-"@variance-authority/event@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/event/-/event-0.27.0.tgz#2945e12290be9eccef2b6de1ed507c596c4fd0b9"
-  integrity sha512-v7/WxRbTrZF0r3Epl+qwjDQhmcw3ipmF30pWbtMxPFh0WFVlccqcJVSRYqTfH+HxqqRmvIEQs+3C75tx3rTTzA==
+"@variance-authority/event@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/event/-/event-0.28.0.tgz#a0780c3e18b67a8262c6f1e321dec68c78e66155"
+  integrity sha512-5qSQXDMElNA3odvmRmuKcUU+WYLs1zAYZLCNv8Lc1UA/ZsaaULsUUj7SjdU1ptMFfHcsIxgebG8fHxs9n5h6tg==
   dependencies:
-    "@variance-authority/wire" "^0.27.0"
+    "@variance-authority/wire" "^0.28.0"
 
-"@variance-authority/eyes@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/eyes/-/eyes-0.27.0.tgz#688c28f18f75788de1b486d6cb8a428e1197217d"
-  integrity sha512-L3+QuunZ7AbU+YpoqWQooiel5OX8N5bIM2HmTUgAxuI6e8WUKikxrFHpLhYNLSkxA92zZ2EHU+zWQSmBXzKBwA==
+"@variance-authority/eyes@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/eyes/-/eyes-0.28.0.tgz#fdc040740b2c8c90d78389eda4d6ab1d2e36263d"
+  integrity sha512-8lH/jJwlEeZXFb7dqPqoG4CMnSXhu7oDYs4XE54vfj375Czed9Jcf8BQsqPjjHDV87gQPYznLMPKarm8Qlu1Dg==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/react" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/react" "^0.28.0"
 
-"@variance-authority/help@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/help/-/help-0.27.0.tgz#4468920a467f4f4343461ef83439e983e2c14844"
-  integrity sha512-uBZjJtu17KBuL3YlFQ60XDh5eG/UPLhdo34wfS3ZPwRCllK8YyG6pACG7GNZQaaI5irsG5zAYMeUrc2g/659WA==
+"@variance-authority/help@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/help/-/help-0.28.0.tgz#bf5304f57f700e248e5504a07f3f9fefbb854f43"
+  integrity sha512-/dqduMwT54OIAVH6EESvPQzckUjRG2ofGyYwYiTjJ+Vq44WdL6nZwMl7UWWGEWRjhcI5uRs2YB9IEk3/fLAEvA==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/mcp" "^0.27.0"
-    "@variance-authority/package" "^0.27.0"
-    "@variance-authority/sense" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/mcp" "^0.28.0"
+    "@variance-authority/package" "^0.28.0"
+    "@variance-authority/sense" "^0.28.0"
 
-"@variance-authority/history@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/history/-/history-0.27.0.tgz#f963065207a6f7f94aa58a7b60efb128797c8279"
-  integrity sha512-djp+JYLKs2HwwM0wWFSeMDeCGnvmEIVpiK8iQ/aRCdIvLTrOBH+mf0rAEZrh3jYdwoUz+WvKAspECW2N6yONxQ==
+"@variance-authority/history@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/history/-/history-0.28.0.tgz#ab7f66bf52ecd4b2e19e5e1090c5de49c43160bc"
+  integrity sha512-7xnFjLhiQMShptbII9dtJsx3uMLWeWcwr44F6IrDCUKAetgUIX75VzZbHNKA3xS2lw28NuSkpRDzywrjwf3ZlA==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
 
-"@variance-authority/mcp@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/mcp/-/mcp-0.27.0.tgz#dd759e089cc0c1875b8c0233230a96fb8b9e9a36"
-  integrity sha512-BDp0/LVmfOlmNC7efQ3ulvcm7YTMCaYqJK5iYPSB057dIkBR64SOm9nwdUJD0dkgMTMdaAm3dOlpVMs3z0xXOg==
+"@variance-authority/mcp@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/mcp/-/mcp-0.28.0.tgz#67d03479bd78055b9c148f0fccc196d5df8e3134"
+  integrity sha512-c+8fzZPg+6LYXQ5OWbL08BbAmupK+9vHVqGQAwOuU0FQmJHON6uJCCg6P+Ir/FmJfbSq7E5Ilnb5XmU/lewrnA==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/distill" "^0.27.0"
-    "@variance-authority/eyes" "^0.27.0"
-    "@variance-authority/presentation" "^0.27.0"
-    "@variance-authority/report" "^0.27.0"
-    "@variance-authority/scenario" "^0.27.0"
-    "@variance-authority/sense" "^0.27.0"
-    "@variance-authority/vantage" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/distill" "^0.28.0"
+    "@variance-authority/eyes" "^0.28.0"
+    "@variance-authority/presentation" "^0.28.0"
+    "@variance-authority/report" "^0.28.0"
+    "@variance-authority/scenario" "^0.28.0"
+    "@variance-authority/sense" "^0.28.0"
+    "@variance-authority/vantage" "^0.28.0"
 
-"@variance-authority/observe@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/observe/-/observe-0.27.0.tgz#160e0b9d4f6dcf43e2132449072fd39c7633758c"
-  integrity sha512-mO1XapyYaPJXrXQDamAL+SLaCUQWZ4ZkeOlDa2Co9OqJBuAoSHu5uDh4xE+YvXvcJvdwxwVJjMluLwJFtqgiAA==
+"@variance-authority/observe@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/observe/-/observe-0.28.0.tgz#bd08ceb4fe71dbc135af7313557222d3022eeab2"
+  integrity sha512-65JlU9B5ldNN9ghzfznARv65AaOpmDUdN8CYpY9MthNLfs/WhIZejPDOpxnTMvf2Hqdz2G8Dcpi+sBxhQrqY0g==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/png" "^0.27.0"
-    "@variance-authority/raster" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/png" "^0.28.0"
+    "@variance-authority/raster" "^0.28.0"
 
-"@variance-authority/package@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/package/-/package-0.27.0.tgz#b7557d49d5a63a3b715aa78d84486e87b5a42563"
-  integrity sha512-A9UNBfBScRXkS9kzZGff+QaAcZotpu/ItA4w7UbBdj4eOyxj/qdIiWL9Ten5e21+vFi48i4ROxiQN7GVz8TecA==
+"@variance-authority/package@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/package/-/package-0.28.0.tgz#477a299ee90234164c29272b8942c87d30bed400"
+  integrity sha512-+j7Qgt4CaJ6HitRTz1nzhKP7tzz9DwlH0MjVhJgNA9FuxjxpU6OI/BfJpM3z1w2HIBAxKHKuioonHPxv4uV5nw==
   dependencies:
     oxc-parser "^0.157.0"
     oxc-resolver "^11.24.2"
     tinyglobby "^0.2.17"
     yaml "^2.9.0"
 
-"@variance-authority/playwright@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/playwright/-/playwright-0.27.0.tgz#bce1093a1ed096e5005d03e4bd77a6beec44af6f"
-  integrity sha512-gRXFr6QmEpzGjvex5A0Mk0Gd7wL/0Zqz1srrwnCixb/gqZUTxlWX0NKXFu34xb+Bg2jGUMDSYougWCOnTbIJQw==
+"@variance-authority/playwright@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/playwright/-/playwright-0.28.0.tgz#b01457b5654ec126e5a44634deede4ec44b65644"
+  integrity sha512-Mn1ARHs7so/H7pC+U3D0x6bk0Z3KCO4atVL4AJUbacHiS8dYL2C1Ei+7zL6AlQQp+d2c807kOO/Bz5I9qzZqPg==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/raster" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/raster" "^0.28.0"
     playwright "^1.55.0"
 
-"@variance-authority/png-sharp@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/png-sharp/-/png-sharp-0.27.0.tgz#3d5fb3dd62ef425ca4bd00317b5f76fbc6c12a11"
-  integrity sha512-K+bh7ZFaMKHftFCJn5S0OpC8BaDdoTE8A4+faZYQQb/R5XmyLBaDjVEeA+gmJHGBLLkYcp5r6/ugNQ2wejqL0Q==
+"@variance-authority/png-sharp@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/png-sharp/-/png-sharp-0.28.0.tgz#582cf2ac23d3a1ac39913b5f74c70fc1e47a9e74"
+  integrity sha512-0OK7NBtqrA0YFh8cWwcg+mIHytgg7uN6BLlyqBm6gDcbA+aH7NqO7T2SU3jlVGnxdH2oXiAvKuNB7e+XsRoHeQ==
   dependencies:
-    "@variance-authority/png" "^0.27.0"
+    "@variance-authority/png" "^0.28.0"
     sharp "^0.35.5"
 
-"@variance-authority/png@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/png/-/png-0.27.0.tgz#b8d51a07446a45562cc6c303b8897237b54cf60e"
-  integrity sha512-10vT49+tRgBebtP8Gjajxn4tJDaHPFlSD/6zlmDWRhiTJAPioSxlrNZvxZuPMLntl4KmvADkTFkZ2xLiDJBDOw==
+"@variance-authority/png@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/png/-/png-0.28.0.tgz#e51fc16c159ee045885e0b2348bf7e69d729a93b"
+  integrity sha512-gFLcABr6KwFTJKIGP4+Zwrfd3w7sYnzXgUP6c86Mh4zJtMMghHAndmWc80Zcbn9vfGYDCRkzIqT5wqEOKuFSWA==
   dependencies:
     "@jsquash/webp" "1.5.0"
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/raster" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/raster" "^0.28.0"
     pixelmatch "^7.2.0"
     pngjs "^7.0.0"
 
-"@variance-authority/presentation@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/presentation/-/presentation-0.27.0.tgz#c1f03b531653b41f9da0c55e18ea30d3932fc3a6"
-  integrity sha512-TI+aNX14GGw1YcTnRrhq5eUwP+1T6dR8x4yr2uuPqtFo3F5b0BTp4u2/sUEk/GwcpA5vyjHgR9OKAvnDmgtCgw==
+"@variance-authority/presentation@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/presentation/-/presentation-0.28.0.tgz#f0630e1cb1cda2cff6e0ab07bfeaf36d21150a9e"
+  integrity sha512-dwhP3THCAl1qLPlWu5rfNzyVIw5X0bnb0F1KtGLqFRaCc7UrYs71Z3w8r5O/QGW+rTsONwrN5XGVOr/qD6r/Ow==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/dom" "^0.27.0"
-    "@variance-authority/react" "^0.27.0"
-    "@variance-authority/report" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/dom" "^0.28.0"
+    "@variance-authority/react" "^0.28.0"
+    "@variance-authority/report" "^0.28.0"
 
-"@variance-authority/raster@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/raster/-/raster-0.27.0.tgz#208d35d4824a253cacbb16a86a5555d0279db988"
-  integrity sha512-ZUZZ/xak/zKDEd4HXUdrhx0qdAqhIN/4hdfDvhqI5AsagDfeX5i6i9X6Z+3bH6P0uVxW0tLd+TUHljPgezZAIg==
+"@variance-authority/raster@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/raster/-/raster-0.28.0.tgz#e72b3945b59a4e73d49e2181000a1403dcb46f80"
+  integrity sha512-Uqm2e1RRMFYS70l73OIrp+wruAU/z4Skcg5gEiF+QqaWUywoe4TgNqPHHvSdzvlndKDKI6c8QN9Fn/D4n0DqLg==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
 
-"@variance-authority/react@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/react/-/react-0.27.0.tgz#4029e7994f7ca01e133c5db1f80b5f97cc8faeff"
-  integrity sha512-vw5qd81istk9dv+OD6csHj29kWv+eSOOBONqG0rb59ABNaA2XgE07dc2dGc037VCDe4M/wkN+xqc9Fwh8Um50g==
+"@variance-authority/react@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/react/-/react-0.28.0.tgz#a6982ffbafb1e8d7e5efb0600f56f4a388d5beeb"
+  integrity sha512-E6/SoQ/eOjjjwqnHTIe1uJHXTOjsMO/+XPiZll7YIWX7HaeHG86Ych5Zh6Qf5V7WJn0CuHZ8pn1+u5JtoZyScQ==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
 
-"@variance-authority/remote@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/remote/-/remote-0.27.0.tgz#47f0d650abc4338b8c8442c3a207719ecc9ce1d2"
-  integrity sha512-ONIOil3uK1RKSs+dPorLLKKn/JmuHCeZGq6ckS1vJb3QdUMIs7seKhyKVodmnvY3qbrkX8/ct10CVeLEbflTWg==
+"@variance-authority/remote@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/remote/-/remote-0.28.0.tgz#69679eb12d993726336a9e757f68e8fcf0469760"
+  integrity sha512-AFJVoWc/F3vCndk/gMbn/S8GWIxel6SrQydcjXO1vmyw3AWpB1mjhTSF8b1PLRhA5JmxpoXMXHNjtJTMNR0zZQ==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/raster" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/raster" "^0.28.0"
 
-"@variance-authority/report@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/report/-/report-0.27.0.tgz#defa1c158af8d73c02b03b929f89422ad72ad31e"
-  integrity sha512-3kOhEUTOXcmJjbQxaddw2WbNgVbsVlbWFxs9j1EBtBDZ7RzmEam/dix/BnA3ZG8arARVonsYnGj7LugVXEEZJw==
+"@variance-authority/report@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/report/-/report-0.28.0.tgz#8e1737b81ab5844d9368f2ac8970e671a92dffce"
+  integrity sha512-T8Z31hfqZ8UcyQt3HDiuRypjzmtPzqlvx4EiXfXCqV6QR26oz5l8sTSm/zl2iavNOGMvTwEiCvr6LbAqR65DEQ==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
 
-"@variance-authority/scenario@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/scenario/-/scenario-0.27.0.tgz#81c7e3183a74078a91061982ebe53288db9012b6"
-  integrity sha512-b85dEt6Koo74XGMAyAqihKbmUboTXAnkZ8raUU9rJElFWKsrRPAZw/sfYnbMiptcSQU3ySJ9Zk+/EVeOR8oHSg==
+"@variance-authority/scenario@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/scenario/-/scenario-0.28.0.tgz#cd49dc553af0dfa290d1b10b13b5919adb6cfb1d"
+  integrity sha512-4BJ5dAgXJEQ0XvvwUaSWsn0a+yfIiaDDVnPD0xXv03zKF3jnA9NkccWRR/htJ1ES7RqJazgstwd3UWE1BlB7+g==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
 
-"@variance-authority/sense-darwin-arm64@0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/sense-darwin-arm64/-/sense-darwin-arm64-0.27.0.tgz#312c63923d5f21a438a0ce57a9a57250ce7ded84"
-  integrity sha512-MyfR8EsX3zcxOscSzwFRTjmITwAFj/Nf/pLZ6+OIyq/pRMiGfkhR7YYnpfMQk/uhPGA6V7q3PbSmgD2niZuT+g==
+"@variance-authority/sense-darwin-arm64@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/sense-darwin-arm64/-/sense-darwin-arm64-0.28.0.tgz#de577b854d8ea857c55bcb664c1c553f829b4a3c"
+  integrity sha512-ccmPWmorP1nwNBuz3EHIyZJnzNxdtO4s4JkDV4UOP3uUViF5+eoeuxiiLsHjWlmKEiqmfou30s4p/YsE8/LBEw==
 
-"@variance-authority/sense-linux-arm64-gnu@0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/sense-linux-arm64-gnu/-/sense-linux-arm64-gnu-0.27.0.tgz#516f045371f53ef01818f113cb4dafb565b9c93b"
-  integrity sha512-njSXzpjBLoU2shLWGof6mdKL8nYYIP5qLnpzBtHQ/2lQ4p8MXcN73wLkoFk99CjOYLjNe9RkR2EHt1FU/VFjiw==
+"@variance-authority/sense-linux-arm64-gnu@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/sense-linux-arm64-gnu/-/sense-linux-arm64-gnu-0.28.0.tgz#562328d5556e555bd2e7aff56954bb0f8e22ac3d"
+  integrity sha512-xlUNKqw2JYG6LIrhGjD7QC0mebZo+jjR1ludZoB5fsn3ro02Guaa8pgf8//TkeJVWpepsOnCjZrLdZ95zwtPMA==
 
-"@variance-authority/sense-linux-x64-gnu@0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/sense-linux-x64-gnu/-/sense-linux-x64-gnu-0.27.0.tgz#03d57fd69e4b8b91dbb4c1d284f0054e0a86b735"
-  integrity sha512-32znvxVxReJYF947sMrCsNovVUFnsGWQZk6IrnrMFeD2T5i9JP13Vq9wd0b4BjQhqoRRc1Te7Wsv4BT7kaZcbA==
+"@variance-authority/sense-linux-x64-gnu@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/sense-linux-x64-gnu/-/sense-linux-x64-gnu-0.28.0.tgz#49c53445e61671adb7bc28dcf3aa68c2d95fd154"
+  integrity sha512-gCeAmEd4J9GF0iulTeo0u+ErJYMceaos/NLNPgMHd5JkrBa9F2m8DkFO9CzrCTipsxRIrsCfKafmPkzvGbvYaA==
 
-"@variance-authority/sense-win32-x64-msvc@0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/sense-win32-x64-msvc/-/sense-win32-x64-msvc-0.27.0.tgz#f1b5aff7d87e8e2dea497623fd7b94a4949a16b6"
-  integrity sha512-/bBgrAHPSShMZ7IAsxyunornUxXZdfDc5z0WjnKvst96NAHsPn02qRbAnuoVdwJfLOyXPTsSBXjxOztEDvPYvw==
+"@variance-authority/sense-win32-x64-msvc@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/sense-win32-x64-msvc/-/sense-win32-x64-msvc-0.28.0.tgz#446a36f926ea2347a78fc7f8ab6f038911f32c50"
+  integrity sha512-PuwbHWF1XT1+a49Yx5w9dh5TdxM9xotHCvUkGbXYgF+o0piw0g71H9k+F/3ZwME0zrbzYSBkD06bkhUyD3qpiw==
 
-"@variance-authority/sense@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/sense/-/sense-0.27.0.tgz#5d55ab3fe05d3ff8f44924673b86492d57e2e43d"
-  integrity sha512-aqHcamZD6YOzA2ffJqt5+hz5x7z4XOy5ckqYieC+rPfAl+Q4XkwogWkFqFJjRGPstptPu7fUFU0IlTl5d+z2EQ==
+"@variance-authority/sense@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/sense/-/sense-0.28.0.tgz#f7f50817b08dfe00ac5a8868b2188e8d6b3ecaed"
+  integrity sha512-3AEvJNd2c9xPN+SL3JAwDiVm8QGyTcHe2XNGlfd2RyRtKByhkVVLSipKAzIuVRbGxlatHiDrQiERVrT3KZEuYA==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/package" "^0.27.0"
-    "@variance-authority/wire" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/package" "^0.28.0"
+    "@variance-authority/wire" "^0.28.0"
     oxc-parser "^0.157.0"
     oxc-resolver "^11.24.2"
     picomatch "^4.0.7"
   optionalDependencies:
-    "@variance-authority/sense-darwin-arm64" "0.27.0"
-    "@variance-authority/sense-linux-arm64-gnu" "0.27.0"
-    "@variance-authority/sense-linux-x64-gnu" "0.27.0"
-    "@variance-authority/sense-win32-x64-msvc" "0.27.0"
+    "@variance-authority/sense-darwin-arm64" "0.28.0"
+    "@variance-authority/sense-linux-arm64-gnu" "0.28.0"
+    "@variance-authority/sense-linux-x64-gnu" "0.28.0"
+    "@variance-authority/sense-win32-x64-msvc" "0.28.0"
 
-"@variance-authority/store@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/store/-/store-0.27.0.tgz#e942050fb373c1d2064d81b20f1d3400308893f4"
-  integrity sha512-kY3MkRIJRhwSCY575AywyVzFAmz7MuZrVa/yxnFnxTntspYC1rsYHVT1TjviFOzeM4GqGyxpZPlCu6AUxkbt4Q==
+"@variance-authority/store@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/store/-/store-0.28.0.tgz#e529fc7b44dd27e369c4f93cbb844da07132d118"
+  integrity sha512-vtq0G+KXudISvg1tczn1bVhfpX/YzjdU1Zuv8nN4nHLzflbkBte7djqohyHfjvEvPpFigevFIZpOXNd/kUtaUQ==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
-    "@variance-authority/png" "^0.27.0"
-    "@variance-authority/png-sharp" "^0.27.0"
-    "@variance-authority/raster" "^0.27.0"
-    "@variance-authority/report" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
+    "@variance-authority/png" "^0.28.0"
+    "@variance-authority/png-sharp" "^0.28.0"
+    "@variance-authority/raster" "^0.28.0"
+    "@variance-authority/report" "^0.28.0"
 
-"@variance-authority/storybook@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/storybook/-/storybook-0.27.0.tgz#f042d738cda567a0baadeecef03df6dd350b27eb"
-  integrity sha512-wPl6YqqXsg3gsqMhXjuP1kmn9Bs5yJReiPr7Rilf6nqos8vmaCzRRkUj5/ozMqpo5JX+RQqyk3WesoHJNeys9g==
+"@variance-authority/storybook@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/storybook/-/storybook-0.28.0.tgz#f6384bb6a5960928cf936d621dcc3a3fae382f5c"
+  integrity sha512-e09YoNYxBmQRFG4Xjw3e9cxNzuhiqRadPzbxxrz7gDZY16y/H+YQvOPSQ4zBmt5a7pL5jkIS2fH6dLWHtwoVEw==
   dependencies:
-    "@variance-authority/core" "^0.27.0"
+    "@variance-authority/core" "^0.28.0"
 
-"@variance-authority/vantage@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/vantage/-/vantage-0.27.0.tgz#8e4208149a9e0284a951202ddc27a0b790401894"
-  integrity sha512-AUOkqp+QrJCK+4hqv7SiOmbHsbXY0LcZPkPCEG+1SdQKbiqisbpfHJN0BQTSJ4lQtvti5AnHGfx2vEX8vMqUAA==
+"@variance-authority/vantage@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/vantage/-/vantage-0.28.0.tgz#cb0b5ff3cbe5f51ddfaa757f90078ad0e3678e90"
+  integrity sha512-BuCUYXn/vJ1XQ5YRAOzK72RMy7jyDIuwz3leh2GRHLJ/fxFWXiCii9OaQ+YYUptP0nQbpIh+x6339id+o1U2tw==
   dependencies:
-    "@variance-authority/event" "^0.27.0"
-    "@variance-authority/wire" "^0.27.0"
+    "@variance-authority/event" "^0.28.0"
+    "@variance-authority/wire" "^0.28.0"
 
-"@variance-authority/wire@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@variance-authority/wire/-/wire-0.27.0.tgz#97ccf8a9c63df63b41d02aaf672e109406147894"
-  integrity sha512-hvlFB3DpgIMhH3z02pieiIs1c/R32ouKGv3UFaov3ryFnCccBpM0uDVgi6f7EDEcpFsVAddvIWyEx8oq5ylbhQ==
+"@variance-authority/wire@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@variance-authority/wire/-/wire-0.28.0.tgz#cc7aa7e980ed62c1e320cd9b22adceb1c61167e0"
+  integrity sha512-LxnK5RPp1VdvJwbC2hl7IBiwjXwoNB88yxS/D+rp2+YXET+JqthTTgs8TKA6omLO8f/19WzaZy5vJmIox908/g==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
