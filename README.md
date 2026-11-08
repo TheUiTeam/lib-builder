@@ -1,5 +1,7 @@
 # uiteam / lib-builder
 
+[![regions run](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FTheUiTeam%2Flib-builder%2Frefs%2Fbadge%2Fmaster%2Fregions-run.json)](https://github.com/TheUiTeam/lib-builder/actions)
+
 > Opinionated toolbox boilerplate to create Typescript React components, based on [ts-react-toolbox](https://github.com/zzarcon/ts-react-toolbox)
 
 # Install

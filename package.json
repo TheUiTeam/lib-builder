@@ -73,9 +73,9 @@
   "devDependencies": {
     "@types/node": "^22.19.0",
     "@types/tmp": "^0.2.6",
-    "@variance-authority/cli": "0.26.0",
-    "@variance-authority/help": "0.26.0",
-    "@variance-authority/sense": "0.26.0"
+    "@variance-authority/cli": "^0.27.0",
+    "@variance-authority/help": "^0.27.0",
+    "@variance-authority/sense": "^0.27.0"
   },
   "packageManager": "yarn@1.22.19"
 }
