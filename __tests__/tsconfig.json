@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "module": "commonjs",
+    "moduleResolution": "node10",
+    "ignoreDeprecations": "5.0",
+    "noEmit": true,
+    "rewriteRelativeImportExtensions": false,
+    "target": "es2022",
+    "importHelpers": false
+  },
+  "include": ["."]
+}

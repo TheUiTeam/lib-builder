@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # __PNPM_SETUP__
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: __MANAGER__
+      - run: __INSTALL__
+      - run: __RUN__ build
+      - run: __RUN__ test:ci
+      - name: Check the packed entry points
+        run: |
+          # the tarball, not npm's stdout: npm 10 runs prepare even under --ignore-scripts
+          packed="$(mktemp -d)"
+          npm pack --ignore-scripts --pack-destination "$packed" > /dev/null
+          tar -tzf "$packed"/*.tgz | node -e '
+            const files = new Set(require("fs").readFileSync(0, "utf8").split("\n"));
+            const { main, module, types } = require("./package.json");
+            const missing = [main, module, types].filter(
+              (entry) => entry && !files.has("package/" + entry.replace(/^\.\//, "")),
+            );
+            if (missing.length) throw new Error("not in the package: " + missing);
+          '
